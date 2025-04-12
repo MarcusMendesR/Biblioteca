@@ -11,10 +11,7 @@ public class BibliotecaApplication {
 	public static void main(String[] args) {
 		
 		Usuario usuario = new Usuario();
-		usuario.cadastrarUsuario();
-		usuario.logarUsuario();
-		usuario.editarUsuario();
-		usuario.excluirUsuario();
+		usuario.menuUsuario();
 	}
 
 }

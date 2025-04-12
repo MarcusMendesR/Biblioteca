@@ -43,6 +43,7 @@ public class Usuario {
         System.out.println("---Cadastro de Usuario---");
         System.out.println("Digite o seu nome: ");
         nome = scanner.nextLine();
+        scanner.nextLine();
         System.out.println("Digite a sua senha: ");
         senha = scanner.nextLine();
         usuario = new Usuario(nome, senha);
@@ -52,17 +53,20 @@ public class Usuario {
             login.add(usuario);
             System.out.println("Usuario cadastrado com sucesso!");
         }
+
     }
 
     public void logarUsuario() {
         System.out.println("---Login---");
         System.out.println("Digite o seu nome: ");
         String nome = scanner.nextLine();
+        scanner.nextLine();
         System.out.println("Digite a sua senha: ");
         String senha = scanner.nextLine();
         usuario = new Usuario(nome, senha);
         if (login.contains(usuario)) {
             System.out.println("Login realizado com sucesso!");
+        
         } else {
             System.out.println("Nome ou senha incorretos!");
         }
@@ -73,6 +77,7 @@ public class Usuario {
         System.out.println("---Editar Usuario---");
         System.out.println("Digite seu nome de usuario");
         String nome = scanner.nextLine();
+        scanner.nextLine();
         System.out.println("Digite sua senha");
         String senha = scanner.nextLine();
         usuario = new Usuario(nome, senha);
@@ -93,6 +98,7 @@ public class Usuario {
         System.out.println("---Ecluir Usuario---");
         System.out.println("Digite o nome de usuario");
         String nome = scanner.nextLine();
+        scanner.nextLine();
         System.out.println("Digite a senha");
         String senha = scanner.nextLine();
         usuario = new Usuario(nome, senha);
@@ -104,6 +110,44 @@ public class Usuario {
     }
 
     public Usuario(String nome2, String senha2) {
-        // TODO Auto-generated constructor stub
+
+    }
+
+    public void menuUsuario() {
+        int opcao = 0;
+
+        do {
+            System.out.println("---Biblioteca---");
+            System.out.println("1 - Cadastrar Usuario");
+            System.out.println("2 - Login Usuario");
+            System.out.println("3 - Editar Usuario");
+            System.out.println("4 - Excluir Usuario");
+            System.out.println("5 - Sair");
+
+            opcao = scanner.nextInt();
+
+            switch (opcao) {
+                case 1:
+
+                    cadastrarUsuario();
+                    break;
+                case 2:
+                    logarUsuario();
+                    opcao = 5;
+                    break;
+                case 3:
+                    editarUsuario();
+                    break;
+                case 4:
+                    excluirUsuario();
+                    break;
+                case 5:
+                    System.out.println("Saindo...");
+                    break;
+                default:
+
+            }
+        } while (opcao != 5);
+
     }
 }
