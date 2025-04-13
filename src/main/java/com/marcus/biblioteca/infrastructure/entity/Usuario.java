@@ -66,7 +66,7 @@ public class Usuario {
         usuario = new Usuario(nome, senha);
         if (login.contains(usuario)) {
             System.out.println("Login realizado com sucesso!");
-        
+
         } else {
             System.out.println("Nome ou senha incorretos!");
         }
