@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.marcus.biblioteca.infrastructure.entity.Livro;
 import com.marcus.biblioteca.infrastructure.entity.Usuario;
+import com.marcus.biblioteca.infrastructure.entity.Biblioteca;
 
 @SpringBootApplication
 public class BibliotecaApplication {
@@ -13,9 +14,8 @@ public class BibliotecaApplication {
 
 		Usuario usuario = new Usuario();
 		// usuario.menuUsuario();
-		Livro livro = new Livro();
-		livro.adicionarLivro();
-		livro.verLivroAutor();
+	    Biblioteca biblioteca = new Biblioteca();
+		biblioteca.menuBiblioteca();
 	}
 
 }
